@@ -98,7 +98,7 @@
 	});
 
 	function urlFor(source: SanityImageSource) {
-		return source ? builder.image(source).width(480).url() : undefined;
+		return source ? builder.image(source).url() : undefined;
 	}
 
 	const thoughts = computed<Thought[]>(() => {
