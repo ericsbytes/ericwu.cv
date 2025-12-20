@@ -6,6 +6,7 @@
 			<slot />
 			<AppFooter />
 		</main>
+		<SpeedInsights />
 	</div>
 </template>
 
@@ -13,6 +14,7 @@
 	import AppSidebar from '~/components/AppSidebar.vue';
 	import AppNavbar from '~/components/AppNavbar.vue';
 	import AppFooter from '~/components/AppFooter.vue';
+	import { SpeedInsights } from '@vercel/speed-insights/nuxt';
 </script>
 
 <style scoped>
