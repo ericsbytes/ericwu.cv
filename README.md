@@ -1,75 +1,28 @@
-# Nuxt Minimal Starter
+# 🌐 Personal Website
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+Created with Nuxt 4. Integrated with Sanity CMS for thoughts. Deployed on Vercel.
 
-## Setup
+## Getting Started
 
-Make sure to install dependencies:
+### Prerequisites
+
+This project uses
+
+-   Node.js (v24.x)
+-   pnpm
+
+### Set-up
+
+Install dependencies with
 
 ```bash
-# npm
-npm install
-
-# pnpm
 pnpm install
-
-# yarn
-yarn install
-
-# bun
-bun install
 ```
 
-## Development Server
+and run locally with
 
-Start the development server on `http://localhost:3000`:
-
-```bash
-# npm
-npm run dev
-
-# pnpm
-pnpm dev
-
-# yarn
-yarn dev
-
-# bun
-bun run dev
+```sh
+pnpm run dev
 ```
 
-## Production
-
-Build the application for production:
-
-```bash
-# npm
-npm run build
-
-# pnpm
-pnpm build
-
-# yarn
-yarn build
-
-# bun
-bun run build
-```
-
-Locally preview production build:
-
-```bash
-# npm
-npm run preview
-
-# pnpm
-pnpm preview
-
-# yarn
-yarn preview
-
-# bun
-bun run preview
-```
-
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+at http://localhost:3000.
