@@ -91,7 +91,7 @@
 
 <style scoped>
 	.footer {
-		padding: 32px 64px;
+		padding: 64px 64px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
@@ -145,14 +145,14 @@
 	/* Tablets */
 	@media (max-width: 1024px) {
 		.footer {
-			padding: 24px 48px;
+			padding: 48px 48px;
 		}
 	}
 
 	/* Mobile landscape and small tablets */
 	@media (max-width: 768px) {
 		.footer {
-			padding: 20px 24px;
+			padding: 32px 24px;
 			flex-direction: column;
 			gap: 24px;
 			align-items: flex-start;
