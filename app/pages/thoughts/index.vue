@@ -214,19 +214,12 @@
 	}
 
 	.thought-date {
-		font-size: clamp(13px, 1.5vw, 14px);
-		color: #aaaaaf;
-		white-space: nowrap;
-	}
-	.thought-date {
 		font-size: 16px;
 		color: #8282bf;
 		font-family: 'Space Mono', monospace;
 		text-transform: uppercase;
 		margin-bottom: 2px;
 		display: block;
-		letter-spacing: 0.04em;
-		font-weight: 400;
 	}
 
 	.thought-item-subtitle {
