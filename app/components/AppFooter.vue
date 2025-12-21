@@ -91,7 +91,7 @@
 
 <style scoped>
 	.footer {
-		padding: 32px 64px;
+		padding: 64px 64px;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
