@@ -302,15 +302,15 @@
 		margin: 48px 64px;
 	}
 
-	.thought-article ::v-deep :first-child {
+	.thought-article :deep(:first-child) {
 		margin-top: 0;
 	}
 
-	.thought-article ::v-deep :last-child {
+	.thought-article :deep(:last-child) {
 		margin-bottom: 0;
 	}
 
-	.thought-article ::v-deep a {
+	.thought-article :deep(a) {
 		color: #8282bf;
 		text-decoration: none;
 		background-image: linear-gradient(currentColor, currentColor);
@@ -322,23 +322,23 @@
 		transition: background-size 0.2s ease;
 	}
 
-	.thought-article ::v-deep a svg {
+	.thought-article :deep(a) svg {
 		text-decoration: inherit;
 	}
 
-	.thought-article ::v-deep a:hover,
-	.thought-article ::v-deep a:focus-visible {
+	.thought-article :deep(a:hover),
+	.thought-article :deep(a:focus-visible) {
 		background-size: 100% 1px;
 	}
 
 	/* Blockquote with decorative opening quotation mark */
-	.thought-article ::v-deep blockquote {
+	.thought-article :deep(blockquote) {
 		position: relative;
 		padding: 8px 2.5rem;
 		margin: 0;
 	}
 
-	.thought-article ::v-deep blockquote::before {
+	.thought-article :deep(blockquote::before) {
 		content: '“';
 		position: absolute;
 		left: 0px;
