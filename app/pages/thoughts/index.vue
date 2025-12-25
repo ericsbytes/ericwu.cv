@@ -17,7 +17,7 @@
 			>
 				<div class="thought-item-header">
 					<time class="thought-date">
-						{{ formatDate(thought.date) }}
+						{{ formatDate(thought.publishedAt) }}
 					</time>
 					<h3 class="thought-item-title">
 						<NuxtLink :to="`/thoughts/${thought.slug}`">
@@ -76,16 +76,18 @@
 		title: string;
 		subtitle: string;
 		date: Date;
+		publishedAt?: Date;
 		image?: string;
 	}
 
 	// Fetch thoughts from Sanity
 
-	const query = `*[_type == "thought"]|order(date desc){
+	const query = `*[_type == "thought"]|order(publishedAt desc){
 		 _id,
 		 title,
 		 subtitle,
 		 date,
+		 publishedAt,
 		 slug,
 		 image
 	 }`;
@@ -115,6 +117,11 @@
 			title: t.title as string,
 			subtitle: t.subtitle as string,
 			date: t.date ? new Date(t.date as string) : new Date(),
+			publishedAt: t.publishedAt
+				? new Date(t.publishedAt as string)
+				: t.date
+				? new Date(t.date as string)
+				: new Date(),
 			image: t.image ? urlFor(t.image) : undefined,
 		}));
 	});
