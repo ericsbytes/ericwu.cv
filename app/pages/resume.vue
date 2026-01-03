@@ -22,7 +22,17 @@
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+	useHead({
+		title: 'Resume · Eric Wu',
+		meta: [
+			{
+				name: 'description',
+				content: 'My professional experiences and skills overview.',
+			},
+		],
+	});
+</script>
 
 <style>
 	* {
