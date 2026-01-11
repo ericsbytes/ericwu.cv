@@ -46,10 +46,26 @@
 				<section class="latest-thought">
 					<h3 class="section-title">Latest thought</h3>
 					<h4 class="thought-title">
-						What is it with all the stuff happening?
+						{{
+							latestThought?.title ||
+							'What is it with all the stuff happening?'
+						}}
 					</h4>
-					<p class="thought-preview">December 24th, 2025</p>
-					<ActionLink href="/thoughts" text="Read more" />
+					<p class="thought-preview">
+						{{
+							latestThought?.publishedAt
+								? formatThoughtDate(latestThought.publishedAt)
+								: 'December 24th, 2025'
+						}}
+					</p>
+					<ActionLink
+						:href="
+							latestThought
+								? `/thoughts/${latestThought.slug}`
+								: '/thoughts'
+						"
+						text="Read more"
+					/>
 				</section>
 
 				<!-- Currently Listening -->
@@ -177,6 +193,38 @@
 	import ActionLink from '~/components/ActionLink.vue';
 
 	const config = useRuntimeConfig();
+
+	// Fetch latest thought from Sanity
+	const thoughtQuery = `*[_type == "thought"]|order(publishedAt desc)[0]{
+		_id,
+		title,
+		subtitle,
+		publishedAt,
+		slug
+	}`;
+	const { data: sanityThought } = useSanityQuery(thoughtQuery);
+
+	const latestThought = computed(() => {
+		const thought = sanityThought.value as any;
+		if (!thought) return null;
+		return {
+			id: thought._id,
+			title: thought.title,
+			subtitle: thought.subtitle,
+			publishedAt: thought.publishedAt
+				? new Date(thought.publishedAt)
+				: null,
+			slug: thought.slug?.current || thought.slug,
+		};
+	});
+
+	const formatThoughtDate = (date: Date) => {
+		return date.toLocaleDateString('en-US', {
+			year: 'numeric',
+			month: 'long',
+			day: 'numeric',
+		});
+	};
 
 	const activeKeyword = ref<number>(0);
 	const keywordCount = 5;
