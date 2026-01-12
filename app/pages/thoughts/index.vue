@@ -141,6 +141,15 @@
 				name: 'description',
 				content: 'A collection of thoughts from a philosophy student.',
 			},
+			{
+				property: 'og:title',
+				content: 'Thoughts',
+			},
+			{
+				property: 'og:description',
+				content: 'A collection of thoughts from a philosophy student.',
+			},
+			// You can add og:image, og:url, etc., if desired
 		],
 	});
 </script>
