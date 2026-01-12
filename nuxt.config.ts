@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Mono:wght@400&display=swap',
+					href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Mono:wght@400&family=Merriweather:wght@400&display=swap',
 				},
 				// favicon served from /public/favicon.svg
 				{

@@ -313,8 +313,10 @@
 	}
 
 	.thought-article {
-		font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-			sans-serif;
+		/* font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+			sans-serif; */
+		font-family: 'Merriweather', serif;
+		line-height: 1.75;
 		font-size: 16px;
 		margin: 48px 64px;
 	}
