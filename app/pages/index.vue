@@ -254,17 +254,6 @@
 		}, baseDelayMs);
 	};
 
-	useHead({
-		title: 'Eric Wu · Computer Scientist & Philosopher',
-		meta: [
-			{
-				name: 'description',
-				content:
-					"Eric Wu's personal website. Computer scientist, philosopher, designer, and tea enthusiast.",
-			},
-		],
-	});
-
 	onMounted(() => {
 		scheduleNext();
 	});
