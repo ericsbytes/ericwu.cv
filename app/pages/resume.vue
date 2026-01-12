@@ -30,6 +30,14 @@
 				name: 'description',
 				content: 'My professional experiences and skills overview.',
 			},
+			{
+				property: 'og:title',
+				content: 'Resume',
+			},
+			{
+				property: 'og:description',
+				content: 'My professional experiences and skills overview.',
+			},
 		],
 	});
 </script>

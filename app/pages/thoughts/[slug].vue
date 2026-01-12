@@ -51,6 +51,7 @@
 	} from '#imports';
 	import { createImageUrlBuilder } from '@sanity/image-url';
 	import type { SanityImageSource } from '@sanity/image-url';
+	import { useHead } from '#app';
 
 	interface Thought {
 		_id?: string;
@@ -230,12 +231,28 @@
 		}
 	});
 
+	const pageTitle = computed(
+		() => `${thought.value?.title || 'Thought'} · Eric Wu`
+	);
+	const embedTitle = computed(() => thought.value?.title || 'Thought');
+	const pageDescription = computed(
+		() => thought.value?.subtitle || 'A thought by Eric Wu.'
+	);
+
 	useHead({
-		title: `${thought.value?.title || ''} · Thoughts · Eric Wu`,
+		title: pageTitle,
 		meta: [
 			{
 				name: 'description',
-				content: thought.value?.subtitle || 'A thought by Eric Wu.',
+				content: pageDescription,
+			},
+			{
+				property: 'og:title',
+				content: embedTitle,
+			},
+			{
+				property: 'og:description',
+				content: pageDescription,
 			},
 		],
 	});
@@ -296,8 +313,10 @@
 	}
 
 	.thought-article {
-		font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
-			sans-serif;
+		/* font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+			sans-serif; */
+		font-family: 'Merriweather', serif;
+		line-height: 1.75;
 		font-size: 16px;
 		margin: 48px 64px;
 	}

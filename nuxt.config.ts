@@ -35,7 +35,7 @@ export default defineNuxtConfig({
 				},
 				{
 					rel: 'stylesheet',
-					href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Mono:wght@400&display=swap',
+					href: 'https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&family=Space+Mono:wght@400&family=Merriweather:wght@400&display=swap',
 				},
 				// favicon served from /public/favicon.svg
 				{
@@ -50,16 +50,43 @@ export default defineNuxtConfig({
 					content: process.env.SITE_NAME || 'Eric Wu',
 				},
 				{
-					property: 'og:site_name',
-					content: process.env.SITE_NAME || 'Eric Wu',
+					name: 'description',
+					content:
+						"Eric Wu's personal website. Computer scientist, philosopher, designer, and tea enthusiast.",
 				},
 				{
 					property: 'og:title',
-					content: process.env.SITE_NAME || 'Eric Wu',
+					content: 'Eric Wu · Computer Scientist & Philosopher',
+				},
+				{
+					property: 'og:description',
+					content:
+						"Eric Wu's personal website. Computer scientist, philosopher, designer, and tea enthusiast.",
+				},
+				{
+					property: 'og:url',
+					content: 'https://ericwu.cv',
+				},
+				{
+					property: 'og:type',
+					content: 'website',
+				},
+				{
+					property: 'og:site_name',
+					content: 'Eric Wu',
+				},
+				{
+					name: 'twitter:card',
+					content: 'summary',
 				},
 				{
 					name: 'twitter:title',
-					content: process.env.SITE_NAME || 'Eric Wu',
+					content: 'Eric Wu · Computer Scientist & Philosopher',
+				},
+				{
+					name: 'twitter:description',
+					content:
+						"Eric Wu's personal website. Computer scientist, philosopher, designer, and tea enthusiast.",
 				},
 			],
 		},
