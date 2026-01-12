@@ -45,19 +45,30 @@
 				<!-- Latest Thought -->
 				<section class="latest-thought">
 					<h3 class="section-title">Latest thought</h3>
-					<h4 class="thought-title">
-						{{
-							latestThought?.title ||
-							'What is it with all the stuff happening?'
-						}}
-					</h4>
-					<p class="thought-preview">
-						{{
-							latestThought?.publishedAt
-								? formatThoughtDate(latestThought.publishedAt)
-								: 'December 24th, 2025'
-						}}
-					</p>
+					<NuxtLink
+						:to="
+							latestThought
+								? `/thoughts/${latestThought.slug}`
+								: '/thoughts'
+						"
+						class="thought-link"
+					>
+						<h4 class="thought-title">
+							{{
+								latestThought?.title ||
+								'What is it with all the stuff happening?'
+							}}
+						</h4>
+						<p class="thought-preview">
+							{{
+								latestThought?.publishedAt
+									? formatThoughtDate(
+											latestThought.publishedAt
+									  )
+									: 'December 24th, 2025'
+							}}
+						</p>
+					</NuxtLink>
 					<ActionLink
 						:href="
 							latestThought
@@ -525,6 +536,12 @@
 		padding: 48px 0;
 		color: #aaaaaf;
 		font-size: 16px;
+	}
+
+	.thought-link {
+		text-decoration: none;
+		color: inherit;
+		display: block;
 	}
 
 	/* Tablet landscape and smaller desktops */
