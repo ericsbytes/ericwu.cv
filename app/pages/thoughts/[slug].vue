@@ -297,12 +297,14 @@
 	.thought-image-container {
 		overflow: hidden;
 		border-bottom: 2px solid #eaeaed;
+		width: 100%;
 	}
 
 	.thought-hero-image {
 		width: 100%;
 		object-fit: cover;
 		display: block;
+		margin: 0;
 	}
 
 	.thought-body {
@@ -396,9 +398,82 @@
 		.thought-container {
 			grid-template-columns: 1fr;
 		}
+		.thought-body {
+			border-right: none;
+		}
 		.footnotes {
 			order: 2;
 			margin-top: 24px;
+		}
+	}
+
+	/* Tablets */
+	@media (max-width: 1024px) {
+		.thought-hero {
+			padding: 48px 48px;
+		}
+
+		.thought-article {
+			margin: 32px 48px;
+		}
+
+		.footnotes {
+			padding: 32px 48px;
+		}
+	}
+
+	/* Mobile landscape and small tablets */
+	@media (max-width: 768px) {
+		.thought-hero {
+			padding: 32px 24px;
+		}
+
+		.thought-title {
+			font-size: 28px;
+		}
+
+		.thought-subtitle {
+			font-size: 18px;
+		}
+
+		.thought-article {
+			margin: 32px 24px;
+		}
+
+		.footnotes {
+			padding: 32px 24px;
+		}
+	}
+
+	/* Mobile portrait */
+	@media (max-width: 480px) {
+		.thought-hero {
+			padding: 24px 16px;
+		}
+
+		.thought-title {
+			font-size: 24px;
+		}
+
+		.thought-subtitle {
+			font-size: 16px;
+		}
+
+		.thought-date {
+			font-size: 14px;
+		}
+
+		.thought-article {
+			margin: 24px 16px;
+			font-size: 15px;
+		}
+
+		.footnotes {
+			padding: 24px 16px;
+		}
+
+		.fn-list li {
+			font-size: 14px;
 		}
 	}
 </style>
