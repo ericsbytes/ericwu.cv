@@ -267,7 +267,7 @@
 	.thought-title {
 		font-size: 32px;
 		font-weight: 700;
-		color: #8282bf;
+		color: #3a3b44;
 		margin-bottom: 4px;
 		margin-top: 0;
 	}
@@ -318,6 +318,7 @@
 		/* font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
 			sans-serif; */
 		font-family: 'Merriweather', serif;
+		color: #3a3b44;
 		line-height: 1.75;
 		font-size: 16px;
 		margin: 48px 64px;
