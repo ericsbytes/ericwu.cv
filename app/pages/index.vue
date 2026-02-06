@@ -3,7 +3,7 @@
 		<!-- Hero Section -->
 		<section class="hero">
 			<h2 class="greeting">Hey!</h2>
-			<h1 class="title">I'm <strong>Eric</strong>.</h1>
+			<h1 class="title">I'm <span class="name">Eric</span>.</h1>
 			<p class="intro">
 				A
 				<span class="keyword" :class="{ active: activeKeyword === 0 }">
@@ -63,8 +63,8 @@
 							{{
 								latestThought?.publishedAt
 									? formatThoughtDate(
-											latestThought.publishedAt
-									  )
+											latestThought.publishedAt,
+										)
 									: 'December 24th, 2025'
 							}}
 						</p>
@@ -290,7 +290,7 @@
 			albums.value = items
 				.map(
 					(it: Record<string, unknown>) =>
-						(it as Record<string, unknown>)?.album
+						(it as Record<string, unknown>)?.album,
 				)
 				.filter((a: Record<string, unknown>) => a && a.image)
 				.map((a: Record<string, unknown>) => ({
@@ -369,9 +369,11 @@
 		font-size: 32px;
 		font-weight: 400;
 		margin-bottom: 12px;
+		color: #3a3b44;
 	}
 
-	.title strong {
+	.name {
+		color: #8282bf;
 		font-weight: 700;
 	}
 
@@ -518,7 +520,6 @@
 		width: 100px;
 		height: 100px;
 		background-color: #eaeaed;
-		border-radius: 4px;
 		flex-shrink: 0;
 	}
 
@@ -526,7 +527,6 @@
 		width: 100px;
 		height: 100px;
 		object-fit: cover;
-		border-radius: 4px;
 		flex-shrink: 0;
 		background-color: #eaeaed;
 	}
