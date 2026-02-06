@@ -61,7 +61,7 @@
 	.title {
 		font-size: 32px;
 		font-weight: 700;
-		color: #3a3b44;
+		color: #8282bf;
 		margin-bottom: 4px;
 	}
 

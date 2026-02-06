@@ -20,7 +20,7 @@
 				<article ref="articleRef" class="thought-article">
 					<SanityContent
 						v-if="contentToRender"
-						:value="(contentToRender as any)"
+						:value="contentToRender as any"
 					/>
 				</article>
 			</div>
@@ -72,11 +72,11 @@
 	const sanityClient = useSanity();
 	const { data: sanityData, error: sanityError } = useAsyncData(
 		() => `thought-${slug}`,
-		() => sanityClient.fetch(query, { slug })
+		() => sanityClient.fetch(query, { slug }),
 	);
 
 	const thought = computed<Thought | null>(
-		() => (sanityData.value as Thought) || null
+		() => (sanityData.value as Thought) || null,
 	);
 
 	// Sanity image URL builder
@@ -156,7 +156,7 @@
 
 		// pattern B: <section class="footnotes"> ... <li id="fn:1"> ...</li>
 		root.querySelectorAll(
-			'.footnotes li[id], section.footnotes li[id]'
+			'.footnotes li[id], section.footnotes li[id]',
 		).forEach(el => {
 			const id = el.id.replace(/^fn[:#-]?/, '') || el.id;
 			if (id) blocks[id] = el.innerHTML.trim();
@@ -178,7 +178,7 @@
 		// If we found nothing, try to find a trailing .footnotes section outside the article
 		if (Object.keys(blocks).length === 0) {
 			const outside = document.querySelectorAll(
-				'.footnotes, section.footnotes, .post-footnotes'
+				'.footnotes, section.footnotes, .post-footnotes',
 			);
 			outside.forEach(sec => {
 				sec.querySelectorAll('li').forEach(li => {
@@ -195,7 +195,7 @@
 		// Build array of footnotes ordered by discovery of inline refs
 		const seen = new Set<string>();
 		const refs = root.querySelectorAll(
-			'sup[data-footnote-id], a[data-footnote-id], span.footnote-ref, sup.footnote-ref'
+			'sup[data-footnote-id], a[data-footnote-id], span.footnote-ref, sup.footnote-ref',
 		);
 		refs.forEach((r, i) => {
 			const id =
@@ -224,7 +224,7 @@
 			'sanityData=',
 			sanityData.value,
 			'error=',
-			sanityError?.value
+			sanityError?.value,
 		);
 		if (thought.value && thought.value.content) {
 			nextTick(() => extractFootnotes());
@@ -232,11 +232,11 @@
 	});
 
 	const pageTitle = computed(
-		() => `${thought.value?.title || 'Thought'} · Eric Wu`
+		() => `${thought.value?.title || 'Thought'} · Eric Wu`,
 	);
 	const embedTitle = computed(() => thought.value?.title || 'Thought');
 	const pageDescription = computed(
-		() => thought.value?.subtitle || 'A thought by Eric Wu.'
+		() => thought.value?.subtitle || 'A thought by Eric Wu.',
 	);
 
 	useHead({
@@ -267,7 +267,7 @@
 	.thought-title {
 		font-size: 32px;
 		font-weight: 700;
-		color: #3a3b44;
+		color: #8282bf;
 		margin-bottom: 4px;
 		margin-top: 0;
 	}

@@ -120,8 +120,8 @@
 			publishedAt: t.publishedAt
 				? new Date(t.publishedAt as string)
 				: t.date
-				? new Date(t.date as string)
-				: new Date(),
+					? new Date(t.date as string)
+					: new Date(),
 			image: t.image ? urlFor(t.image) : undefined,
 		}));
 	});
@@ -173,7 +173,7 @@
 	.title {
 		font-size: 32px;
 		font-weight: 700;
-		color: #3a3b44;
+		color: #8282bf;
 		margin-bottom: 4px;
 	}
 
@@ -268,7 +268,11 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 4px;
-		font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI',
+		font-family:
+			'Poppins',
+			-apple-system,
+			BlinkMacSystemFont,
+			'Segoe UI',
 			sans-serif;
 		font-size: 16px;
 		color: #8282bf;
