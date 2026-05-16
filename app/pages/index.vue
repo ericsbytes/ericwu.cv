@@ -173,20 +173,20 @@
 						</div>
 						<div class="activity">
 							<a
-								href="https://unitedwayri.org"
+								href="https://isi.edu"
 								target="_blank"
 								class="company-logo"
 							>
 								<img
-									src="/images/united-way.svg"
-									alt="United Way"
+									src="/images/isi-logo.jpg"
+									alt="USC Information Sciences Institute"
 									class="logo-img"
 								/>
 							</a>
 							<div class="activity-content">
-								<h4>Volunteer Intern, Philanthropy</h4>
+								<h4>Research Fellow</h4>
 								<p class="activity-subtitle">
-									United Way of Rhode Island
+									USC Information Sciences Institute
 								</p>
 							</div>
 						</div>

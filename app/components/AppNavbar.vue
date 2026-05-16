@@ -3,7 +3,7 @@
 		<nav class="nav">
 			<a href="/" class="nav-home">/</a>
 			<a href="/resume">RESUME</a>
-			<a href="/projects">PROJECTS</a>
+			<!-- <a href="/projects">PROJECTS</a> -->
 			<a href="/thoughts">THOUGHTS</a>
 		</nav>
 	</header>
