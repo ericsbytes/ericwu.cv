@@ -145,7 +145,7 @@
 								/>
 							</a>
 							<div class="activity-content">
-								<h4>Sophomore, CS & Philosophy</h4>
+								<h4>Junior, CS & Philosophy</h4>
 								<p class="activity-subtitle">
 									Brown University
 								</p>
